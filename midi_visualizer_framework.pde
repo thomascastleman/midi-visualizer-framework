@@ -21,12 +21,6 @@ void setup() {
 void draw() {
   background(0);  // reset the background color
   nm.track();  // track notes being played
-  
-  // display each note as an ellipse scaled by pitch
-  for (int i = 0; i < nm.notes.size(); i++) {
-    Note n = nm.notes.get(i);
-    ellipse(scaleValue(n.pitch, MINPITCH, MAXPITCH, 0, 700), 350, 20, 20);
-  }
 }
 
 // scale value from one range to another
