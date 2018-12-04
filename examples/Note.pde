@@ -31,7 +31,7 @@ class Note {
     this.position.add(this.positionalVelocity);
   }
   
-  // display node on canvas
+  // display note on canvas
   void display() {
     fill(scalePitchToRainbow(this.pitch), scaleVal(this.lifespan, 0, 45, 0, 255));  // fill color based on pitch, alpha based on lifespan left (fading)
     ellipse(this.position.x, this.position.y, 60, 60);  // ellipse representation

@@ -31,23 +31,3 @@ void noteOff(int channel, int pitch, int velocity) {
   // release this note
   nm.releaseNote(new Note(channel, pitch, velocity));
 }
-
-// scale value from one range to another
-float scaleVal(float value, int oldMin, int oldMax, int newMin, int newMax) {
-  return (((float) (value - oldMin)) / (oldMax - oldMin)) * (newMax - newMin) + newMin;
-}
-
-// scale pitch to a rainbow color value
-color scalePitchToRainbow(int pitch) {
-  float freq = 2 * (2 * (float) Math.PI) / (MAXPITCH - MINPITCH);
-  
-  // scale between 0 and pitchRange
-  int truePitch = pitch - MINPITCH;
-  
-  // calc rgb values using out of phase waves
-  float r = scaleVal((float) Math.cos(truePitch * freq), -1, 1, 0, 255);
-  float b = scaleVal((float) Math.cos(truePitch * freq + 2), -1, 1, 0, 255);
-  float g = scaleVal((float) Math.cos(truePitch * freq + 4), -1, 1, 0, 255);
-  
-  return color(r, g, b);
-}
