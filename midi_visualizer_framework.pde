@@ -23,11 +23,6 @@ void draw() {
   nm.track();  // track notes being played
 }
 
-// scale value from one range to another
-float scaleValue(float value, int oldMin, int oldMax, int newMin, int newMax) {
-  return (((float) (value - oldMin)) / (oldMax - oldMin)) * (newMax - newMin) + newMin;
-}
-
 // when a new key is pressed on the MIDI instrument
 void noteOn(int channel, int pitch, int velocity) {
   // add this note
