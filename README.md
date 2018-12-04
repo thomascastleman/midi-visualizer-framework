@@ -8,7 +8,7 @@ When using input from a MIDI instrument in Processing, issues may arise with the
 
 ## Overview
 
-The code for handling note tracking is packaged into the `NoteManager` class. The `NoteManager` assumes the existence of a `Note` class which has at least the following attributes and functions:
+The code for handling note tracking is packaged into the `NoteManager` class. The `NoteManager` assumes the existence of a `Note` class (as outlined in `Note.pde`) which has at least the following attributes and functions:
 ```java
   int lifespan;                   // lifespan of note, in frames
   boolean isReleased;             // whether or not the note has been released yet
@@ -22,12 +22,12 @@ The `NoteManager` itself has a few key functions which are of use to the develop
 ```java
 void addNote(Note n)
 ```
-This adds a new `Note` object to be tracked. 
+This adds a new `Note` object to be tracked. Likely called every time a `noteOn` is received.
 
 ```java
 void releaseNote(Note n)
 ```
-This will release the `Note` object with the same specifications as the given `Note n` from being tracked.
+This will release the `Note` object with the same specifications as the given `Note n` from being tracked. Likely called every time a `noteOff` is received.
 
 ```java
 void track()
