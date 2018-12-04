@@ -24,7 +24,7 @@ class NoteManager {
     notesToRelease.add(n);
   }
   
-  // add new notes to tracked notes, remove old notes from tracked notes
+  // add new notes to tracked notens, remove old notes from tracked notes
   void track() {
     this.release.addAll(this.notesToRelease);  // add every note waiting to be released to list of notes about to be released
     this.notesToRelease.clear();  // remove everything from list of notes waiting to be released
@@ -48,6 +48,11 @@ class NoteManager {
     ListIterator<Note> iter = this.notes.listIterator();
     while (iter.hasNext()) {
       Note n = iter.next();
+      
+      // if note has been released, decrement lifespan
+      if (n.isReleased) {
+        n.lifespan--;
+      }
       
       // update and display each note
       n.update();

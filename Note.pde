@@ -14,11 +14,9 @@ class Note {
     this.isReleased = false;
   }
   
-  // update note age and features
+  // update note properties
   void update() {
-    if (this.isReleased) {
-      this.lifespan--;
-    }
+
   }
   
   // display node on canvas
