@@ -35,3 +35,5 @@ void track()
 This function, which should be run every iteration of the `draw()` loop, tells the `NoteManager` to start tracking all the notes that were pressed since the last iteration of `draw()`, and to stop tracking any of the notes that have since been released. It also calls `update()` and then `display()` on every note currently being tracked.
 
 At any given point in the tracking, an `ArrayList` of the `Note` objects currently being tracked is stored under `NoteManager.notes`.
+
+<center><img src="http://tcastleman.com/imgs/midi.jpg"></center>
