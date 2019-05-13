@@ -36,4 +36,4 @@ This function, which should be run every iteration of the `draw()` loop, tells t
 
 At any given point in the tracking, an `ArrayList` of the `Note` objects currently being tracked is stored under `NoteManager.notes`.
 
-<center><img src="http://tcastleman.com/imgs/midi.jpg"></center>
+<center><img src="http://castleman.space/imgs/midi.jpg"></center>
