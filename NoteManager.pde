@@ -1,4 +1,8 @@
 
+/*
+    Authored by Thomas Castleman, 2018
+*/
+
 // NoteManager class manages the tracking of MIDI notes, as played live
 class NoteManager {
   

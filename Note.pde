@@ -1,4 +1,8 @@
 
+/*
+    Authored by Thomas Castleman, 2018
+*/
+
 // Note class handles attributes that all played notes share
 class Note {
   
