@@ -1,4 +1,3 @@
-
 /*
     Authored by Thomas Castleman, 2018
 */

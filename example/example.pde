@@ -11,7 +11,7 @@ void setup() {
   fullScreen();                    // set the size of the window
   background(0);                   // set the background color of window
   MidiBus.list();                  // list all available Midi devices
-  bus = new MidiBus(this, 0, 1);   // tell MidiBus to listen to connected MIDI instrument
+  bus = new MidiBus(this, 1, 4);   // tell MidiBus to listen to connected MIDI instrument
   nm = new NoteManager();          // create a note manager
 }
 

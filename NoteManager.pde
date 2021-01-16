@@ -1,15 +1,11 @@
 
-/*
-    Authored by Thomas Castleman, 2018
-*/
-
 // NoteManager class manages the tracking of MIDI notes, as played live
 class NoteManager {
   
-  public ArrayList<Note> notes = new ArrayList<Note>();            // all note objects currently being tracked
-  private ArrayList<Note> notesToAdd = new ArrayList<Note>();      // notes to add to the list of tracked notes
-  private ArrayList<Note> release = new ArrayList<Note>();         // notes that will be released on this iteration of the draw() loop
-  private ArrayList<Note> notesToRelease = new ArrayList<Note>();  // notes waiting for the next iteration of draw() to be released
+  public HashSet<Note> notes = new HashSet<Note>();            // all note objects currently being tracked
+  private HashSet<Note> notesToAdd = new HashSet<Note>();      // notes to add to the list of tracked notes
+  private HashSet<Note> release = new HashSet<Note>();         // notes that will be released on this iteration of the draw() loop
+  private HashSet<Note> notesToRelease = new HashSet<Note>();  // notes waiting for the next iteration of draw() to be released
   
   // construct a new NoteManager object
   public NoteManager() {
@@ -49,7 +45,7 @@ class NoteManager {
     this.notesToAdd.clear();  // remove everything from list of notes waiting to be tracked
     
     // iterate through all notes currently being tracked
-    ListIterator<Note> iter = this.notes.listIterator();
+    Iterator<Note> iter = this.notes.iterator();
     while (iter.hasNext()) {
       Note n = iter.next();
       
